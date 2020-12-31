@@ -1,0 +1,89 @@
+:root {
+  --black: rgba(17, 17, 17, 1);
+  --white: #F4F7F5;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--black);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+  padding: 0;
+}
+header{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(./img/covid-gif.gif);
+  background-size: cover;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: height 2s linear;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+#title{
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 900;
+  color: var(--white);
+  font-size: 8vw;
+  position: sticky;
+  top: 0;
+  transition: font-size 2s linear;
+  opacity: .8;
+}
+#downArow{
+  font-size: 50px;
+  margin-top: 100px;
+  color: var(--white);
+  cursor: pointer;
+  opacity: .8;
+  transition: opacity 1s;
+  animation: arrowUpDown 1.5s infinite ease-out;
+}
+@keyframes arrowUpDown{
+  0%,100%{
+  transform:translateY(0px)
+  }
+  50%{
+    transform:translateY(30px)
+  }
+}
+#countries{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  justify-content: center;
+  grid-gap: 10px ;
+  background: var(--white);
+  margin:0 20px;
+  opacity: 0;
+  transition: opacity 4s;
+  height: 100%;
+  overflow: scroll;
+  padding:20px 0;
+}
+.countriesItem{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+.countriesItem>ul{
+  list-style: none;
+  text-align: left;
+}
