@@ -21,6 +21,7 @@ async function getData() {
   }
   catch (error) {
     console.log(error);
+    eror404();
 
   }
   finally {
@@ -63,4 +64,11 @@ function showSiteData() {
     title.innerText = "Covid-19 worldwide Data";
     header.style.background = "var(--black)";
   }, 1700)
+}
+
+function eror404() {
+  let countriesDiv = document.getElementById("countries");
+  countriesDiv.style.display = "block";
+  countriesDiv.innerHTML = '<img src="https://images.squarespace-cdn.com/content/v1/5e2a080f67dff416860d11f7/1580952613419-9WT11W7L3BVM11G5VLD8/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UbeDbaZv1s3QfpIA4TYnL5Qao8BosUKjCVjCf8TKewJIH3bqxw7fF48mhrq5Ulr0Hg/image-asset.png" alt="" style="width:50vw; display:block;margin:auto;"><h1 style="text-align:center;">We Will Fix It Soon</h1>'
+  console.log("check");
 }
