@@ -37,30 +37,30 @@ function insertDataToWeb(data) {
  <img src="${flagsApiStart + countrieObject.CountryCode + flagsApiEnd}" alt="">
  <h4>${countrieObject.Country}</h4>
  <ul>
- <li> NewConfirmed : ${countrieObject.NewConfirmed}</li>
- <li>TotalConfirmed : ${countrieObject.TotalConfirmed}</li>
- <li>NewDeaths : ${countrieObject.NewDeaths}</li>
- <li>TotalDeaths : ${countrieObject.TotalDeaths}</li>
- <li>NewRecovered : ${countrieObject.NewRecovered}</li>
- <li>TotalRecovered : ${countrieObject.TotalRecovered}</li>
+ <li> New Confirmed : ${countrieObject.NewConfirmed}</li>
+ <li>Total Confirmed : ${countrieObject.TotalConfirmed}</li>
+ <li>New Deaths : ${countrieObject.NewDeaths}</li>
+ <li>Total Deaths : ${countrieObject.TotalDeaths}</li>
+ <li>New Recovered : ${countrieObject.NewRecovered}</li>
+ <li>Total Recovered : ${countrieObject.TotalRecovered}</li>
 </ul>
 </div>`
   });
   footerDiv.innerHTML = `<ul class="scrollWorldUpdate">
-  <li><b>NewConfirmed:</b> ${global.NewConfirmed} </li> 
-  <li><b>NewDeaths:</b>  ${global.NewDeaths} </li> 
-  <li><b>NewRecovered:</b>  ${global.NewRecovered} </li> 
-  <li><b>TotalConfirmed:</b>  ${global.TotalConfirmed} </li> 
-  <li><b>TotalDeaths:</b>  ${global.TotalDeaths} </li> 
-  <li><b>TotalRecovered:</b>  ${global.TotalRecovered} </li> 
+  <li><b>New Confirmed:</b> ${global.NewConfirmed} </li> 
+  <li><b>New Deaths:</b>  ${global.NewDeaths} </li> 
+  <li><b>New Recovered:</b>  ${global.NewRecovered} </li> 
+  <li><b>Total Confirmed:</b>  ${global.TotalConfirmed} </li> 
+  <li><b>Total Deaths:</b>  ${global.TotalDeaths} </li> 
+  <li><b>Total Recovered:</b>  ${global.TotalRecovered} </li> 
   </ul>`
   footerDiv.innerHTML += `<ul class="scrollWorldUpdate">
-<li><b>NewConfirmed:</b> ${global.NewConfirmed} </li> 
-<li><b>NewDeaths:</b>  ${global.NewDeaths} </li> 
-<li><b>NewRecovered:</b>  ${global.NewRecovered} </li> 
-<li><b>TotalConfirmed:</b>  ${global.TotalConfirmed} </li> 
-<li><b>TotalDeaths:</b>  ${global.TotalDeaths} </li> 
-<li><b>TotalRecovered:</b>  ${global.TotalRecovered} </li> 
+<li><b>New Confirmed:</b> ${global.NewConfirmed} </li> 
+<li><b>New Deaths:</b>  ${global.NewDeaths} </li> 
+<li><b>New Recovered:</b>  ${global.NewRecovered} </li> 
+<li><b>Total Confirmed:</b>  ${global.TotalConfirmed} </li> 
+<li><b>Total Deaths:</b>  ${global.TotalDeaths} </li> 
+<li><b>Total Recovered:</b>  ${global.TotalRecovered} </li> 
 </ul>`
 }
 
