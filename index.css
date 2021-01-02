@@ -100,18 +100,28 @@ footer{
   white-space: nowrap;
   align-items: center;
   text-transform: uppercase;
-  /* overflow: hidden; */
 }
 .scrollWorldUpdate>li{
 margin-right: 30px;
 font-size: 15px;
 }
+.scrollWorldUpdate>li:nth-child(6){
+  margin-right: 0;
+
+  }
+.scrollWorldUpdate>li:hover{
+text-decoration: underline;
+color: rgb(236, 58, 58);
+  }
 .scrollWorldUpdate:nth-child(1){  
-  animation: scrollText1 10s linear infinite;
+  animation: scrollText1 40s linear infinite;
 }
 .scrollWorldUpdate:nth-child(2){
-  animation: scrollText2 10s linear infinite;
-  /* display: none; */
+  animation: scrollText2 40s linear infinite;
+}
+footer:hover>.scrollWorldUpdate{
+  animation-play-state: paused;
+  cursor: pointer;
 }
 
 @keyframes scrollText1{
