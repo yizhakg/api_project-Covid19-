@@ -31,6 +31,7 @@ async function getData() {
 
 function insertDataToWeb(data) {
   let dataOfCountries = document.getElementById("countries");
+  let footerDiv = document.getElementById("footer")
   data.forEach(countrieObject => {
     dataOfCountries.innerHTML += `<div class="countriesItem">
  <img src="${flagsApiStart + countrieObject.CountryCode + flagsApiEnd}" alt="">
@@ -45,6 +46,22 @@ function insertDataToWeb(data) {
 </ul>
 </div>`
   });
+  footerDiv.innerHTML = `<ul class="scrollWorldUpdate">
+  <li><b>NewConfirmed:</b> ${global.NewConfirmed} </li> 
+  <li><b>NewDeaths:</b>  ${global.NewDeaths} </li> 
+  <li><b>NewRecovered:</b>  ${global.NewRecovered} </li> 
+  <li><b>TotalConfirmed:</b>  ${global.TotalConfirmed} </li> 
+  <li><b>TotalDeaths:</b>  ${global.TotalDeaths} </li> 
+  <li><b>TotalRecovered:</b>  ${global.TotalRecovered} </li> 
+  </ul>`
+  footerDiv.innerHTML += `<ul class="scrollWorldUpdate">
+<li><b>NewConfirmed:</b> ${global.NewConfirmed} </li> 
+<li><b>NewDeaths:</b>  ${global.NewDeaths} </li> 
+<li><b>NewRecovered:</b>  ${global.NewRecovered} </li> 
+<li><b>TotalConfirmed:</b>  ${global.TotalConfirmed} </li> 
+<li><b>TotalDeaths:</b>  ${global.TotalDeaths} </li> 
+<li><b>TotalRecovered:</b>  ${global.TotalRecovered} </li> 
+</ul>`
 }
 
 function getToDivViaId() {
