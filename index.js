@@ -72,15 +72,12 @@ function showSiteData() {
   let header = document.getElementById("header");
   let title = document.getElementById("title");
   let countries = document.getElementById("countries");
-  header.style.height = "8vh";
-  title.style.fontSize = "20px";
+  header.style.height = "0";
   countries.style.opacity = "1";
+  title.style.opacity = "0"
   header.lastElementChild.style.opacity = "0"
   setTimeout(() => {
-    title.innerText = "Covid-19 worldwide Data";
-    header.style.background = "var(--black)";
-    header.style.zIndex="0";
-    header.lastElementChild.style.display = "none"
+    header.style.display="none"
   }, 2000)
 }
 

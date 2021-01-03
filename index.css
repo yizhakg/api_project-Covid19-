@@ -9,8 +9,8 @@ body{
   background-color: var(--black);
   overflow: hidden;
   /* overflow-x:hidden ; */
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
   text-align: center;
 }
 
@@ -19,21 +19,18 @@ h1,h2,h3,h4,h5,h6,p{
   padding: 0;
 }
 #header{
-  margin: 0;
-  padding: 0;
+  position: absolute;
   height: 100vh;
   width: 100vw;
+  top: 0;
   background-image: url(./img/covid-gif.gif);
   background-size: cover;
-  box-sizing: content-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: height 2s linear;
-  position: sticky;
-  top: 0;
   z-index: 1;
+  transition: height 2s linear;
 }
 #title{
   text-transform: capitalize;
@@ -41,10 +38,8 @@ h1,h2,h3,h4,h5,h6,p{
   font-weight: 900;
   color: var(--white);
   font-size: 9vw;
-  position: sticky;
-  top: 0;
-  transition: font-size 2s linear;
   opacity: .8;
+  transition: opacity 2s;
 }
 #downArow{
   font-size: 50px;
@@ -63,10 +58,24 @@ h1,h2,h3,h4,h5,h6,p{
     transform:translateY(30px)
   }
 }
+#navBar{
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+  /* grid-template-rows: 5vh; */
+  padding: 0 20px;
+  margin: 10px;
+  z-index: 0;
+  color: var(--white);
+  height: 7vh;
+}
+.navBarTitle{
+  font-size: 30px;
+}
 input[type=text] {
-  position: absolute;
-    top: 1.5vh;
-    right: 22px;
+  justify-self: right;
   width: 0px;
   border: 0px solid #ccc;
   border-radius: 4px;
@@ -80,21 +89,19 @@ input[type=text] {
   transition: all .5s linear;
   opacity: .9;
   cursor: pointer;
+  height: 30px;
 }
 
 input[type=text]:focus {
   border: 2px solid #ccc;
   padding: 5px 20px 5px 40px;
   background-color: var(--white);
-  width: 250px;
+  width: 100%;
   cursor: text;
 }
 .siteLogo{
   height: 40px;
   width: 40px;
-  position: absolute;
-  top: 1vh;
-  left: 20px;
   opacity: .9;
 }
 #countries{
@@ -102,12 +109,13 @@ input[type=text]:focus {
   grid-template-columns: repeat(auto-fit, 200px);
   grid-template-rows: repeat(auto-fit, 300px);
   justify-content: center;
+  align-items: center;
   grid-gap: 10px ;
   background: var(--white);
   margin:0 20px;
   opacity: 0;
   transition: opacity 4s;
-  height: 85vh;
+  height: 82vh;
   overflow-y: scroll;
   overflow-x: hidden;
   padding:20px 0;
@@ -128,7 +136,7 @@ input[type=text]:focus {
 }
 #footer{
   overflow: hidden;
-  height: 7vh;
+  height: 10vh;
 }
 #scrollText{
   color: var(--white);
@@ -183,21 +191,25 @@ footer:hover>.scrollWorldUpdate{
   }
 
   @media screen and (max-width: 500px){
-    #title{
-      font-size: 17vw;
+    .navBarTitle{
+      grid-area: 1/2/1/4;
+      font-size: 5vw;
+      align-self: center;
     }
     input[type=text]{
-      top: 7vh;
+      justify-self: center;
+      grid-area: 2/1/2/4;
     }
-    .siteLogo{
-      top: 6.5vh;
+    input[type=text]:focus{
+      width: 50%;
+    }
+    #navBar{
+height: 12vh;
     }
     #countries{
-      height: 80vh;
-      margin-top: 5vh;
-      grid-template-columns: repeat(auto-fit, 130px);
-      grid-template-rows: repeat(auto-fit, 195px);
-      font-size: 10px;
+height: 75vh;
+    font-size: 10px;
+grid-template-columns: repeat(auto-fit, 130px);
+grid-template-rows: repeat(auto-fit, 195px);
     }
-
   }
