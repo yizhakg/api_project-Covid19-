@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Covid,Corona">
+  <meta name="description" content="Free Covid-19 Data Analysis">
+  <meta name="author" content="Yizhak Gete">
+  <meta http-equiv="refresh" content="360">
   <title>Covid-19</title>
   <link rel="stylesheet" href="index.css">
   <link rel="icon"
@@ -23,8 +27,13 @@
     <h1 id="title">Covid-19<br>worldwide Data</h1>
     <i id="downArow" class="fas fa-chevron-circle-down" onclick="showSiteData()"></i>
   </header>
+  <input id="searchBox" type="text" name="searchBox" placeholder="Search.." oninput="searchResults()">
+  <img class="siteLogo"
+    src="https://www.eurodiaconia.org/wordpress/wp-content/uploads/2020/03/hilf-jetzt-logo-ohne-text.png" alt="">
   <div id="countries"></div>
-  <footer id="footer"></footer>
+  <footer id="footer">
+    <div id="scrollText"></div>
+  </footer>
   <script src="index.js"></script>
 </body>
 

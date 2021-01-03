@@ -8,15 +8,17 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--black);
   overflow: hidden;
+  /* overflow-x:hidden ; */
   height: 100vh;
   width: 100vw;
+  text-align: center;
 }
 
 h1,h2,h3,h4,h5,h6,p{
   margin: 0;
   padding: 0;
 }
-header{
+#header{
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -38,7 +40,7 @@ header{
   text-align: center;
   font-weight: 900;
   color: var(--white);
-  font-size: 8vw;
+  font-size: 9vw;
   position: sticky;
   top: 0;
   transition: font-size 2s linear;
@@ -61,17 +63,52 @@ header{
     transform:translateY(30px)
   }
 }
+input[type=text] {
+  position: absolute;
+    top: 1.5vh;
+    right: 22px;
+  width: 0px;
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: var(--black);
+  background-image: url('https://img.icons8.com/cotton/2x/search--v2.png');
+  background-size: 25px;
+  background-position: 3px 3px; 
+  background-repeat: no-repeat;
+  padding: 5px 0px 5px 30px;
+  transition: all .5s linear;
+  opacity: .9;
+  cursor: pointer;
+}
+
+input[type=text]:focus {
+  border: 2px solid #ccc;
+  padding: 5px 20px 5px 40px;
+  background-color: var(--white);
+  width: 250px;
+  cursor: text;
+}
+.siteLogo{
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 1vh;
+  left: 20px;
+  opacity: .9;
+}
 #countries{
   display: grid;
   grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-rows: repeat(auto-fit, 300px);
   justify-content: center;
   grid-gap: 10px ;
   background: var(--white);
   margin:0 20px;
   opacity: 0;
   transition: opacity 4s;
-  height: 85%;
-  overflow: scroll;
+  height: 85vh;
+  overflow-y: scroll;
   overflow-x: hidden;
   padding:20px 0;
 }
@@ -87,11 +124,15 @@ header{
 .countriesItem>ul{
   list-style: none;
   text-align: left;
+  padding: 0;
 }
-footer{
+#footer{
+  overflow: hidden;
+  height: 7vh;
+}
+#scrollText{
   color: var(--white);
   text-align: center;
-  overflow: hidden;
   display: flex;
   width: 2000px;
 }
@@ -104,14 +145,14 @@ footer{
 .scrollWorldUpdate>li{
 margin-right: 30px;
 font-size: 15px;
+opacity: .8;
 }
-.scrollWorldUpdate>li:nth-child(6){
-  margin-right: 0;
-
-  }
 .scrollWorldUpdate>li:hover{
 text-decoration: underline;
-color: rgb(236, 58, 58);
+opacity: 1;
+  }
+.scrollWorldUpdate>li:nth-child(6){
+  margin-right: 0;
   }
 .scrollWorldUpdate:nth-child(1){  
   animation: scrollText1 40s linear infinite;
@@ -139,4 +180,24 @@ footer:hover>.scrollWorldUpdate{
   100%{
     transform: translateX(-100%);
   }
+  }
+
+  @media screen and (max-width: 500px){
+    #title{
+      font-size: 17vw;
+    }
+    input[type=text]{
+      top: 7vh;
+    }
+    .siteLogo{
+      top: 6.5vh;
+    }
+    #countries{
+      height: 80vh;
+      margin-top: 5vh;
+      grid-template-columns: repeat(auto-fit, 130px);
+      grid-template-rows: repeat(auto-fit, 195px);
+      font-size: 10px;
+    }
+
   }
