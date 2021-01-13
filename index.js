@@ -6,7 +6,6 @@ let global;
 window.onload = () => {
   getData();
 }
-
 function getApi() {
   return fetch(url).then(res => res.json())
 }
